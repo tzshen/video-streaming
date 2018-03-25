@@ -10,9 +10,10 @@ def actions(name):
     if not (name in foundedNames):
         foundedNames.append(name)
         subprocess.call(["python", "say_hi.py", name])
-        subprocess.call(["python", "sns-publish.py", name])
-    else:
+        subprocess.call(["python", "sns-publish.py", "VIP %s comes in" % name])
         print "Founded %d peoples" % len(foundedNames)
+    # else:
+        # print "Founded %d peoples" % len(foundedNames)
 
 with open('config.json') as json_data_file:
     config = json.load(json_data_file)
