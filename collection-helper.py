@@ -9,7 +9,7 @@ def createCollection(collectionId):
         response = client.create_collection(CollectionId=collectionId)
         print(response)
     except botocore.exceptions.ClientError as e:
-		print "Error: {0}".format(e)
+        print "Error: {0}".format(e)
 
 def listFaces(collectionId):
     response = client.list_faces(CollectionId=collectionId, MaxResults=500)
@@ -42,11 +42,11 @@ if __name__ == '__main__':
     with open('config.json') as json_data_file:
         config = json.load(json_data_file)
 
-	collectionId = config['collectionId']
+    collectionId = config['collectionId']
     region = config['region']
     client = boto3.client('rekognition', region_name=region)
 
     if (args.create):
-		createCollection(collectionId)
+        createCollection(collectionId)
     elif (args.delete):
-		deleteCollection(collectionId)
+        deleteCollection(collectionId)

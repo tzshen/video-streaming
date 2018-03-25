@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     with open('config.json') as json_data_file:
         config = json.load(json_data_file)
-	region = config['region']
+    region = config['region']
     collectionId = config['collectionId']
     client = boto3.client('rekognition', region_name=region)
     filename = sys.argv[1]

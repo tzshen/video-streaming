@@ -34,6 +34,6 @@ if __name__ == '__main__':
     client = session.client('kinesis', region_name=region)
 
     if (args.create):
-		createDataStream(kinesisDataStreamName)
+        createDataStream(kinesisDataStreamName)
     elif (args.delete):
-		deleteDataStream(kinesisDataStreamName)
+        deleteDataStream(kinesisDataStreamName)

@@ -38,6 +38,6 @@ if __name__ == '__main__':
     client = boto3.client('sns', region_name=region)
 
     if (args.create):
-		createSNSTopic(snsTopicName)
+        createSNSTopic(snsTopicName)
     elif (args.delete):
-		deleteSNSTopic(snsTopicName)
+        deleteSNSTopic(snsTopicName)
