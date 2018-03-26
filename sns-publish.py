@@ -4,7 +4,6 @@ import json
 
 if __name__ == '__main__':
     if len(sys.argv)==1:
-        parser.print_help()
         sys.exit(1)
     message = sys.argv[1]
     with open('config.json') as json_data_file:

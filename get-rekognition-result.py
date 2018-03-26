@@ -1,17 +1,16 @@
-#! /usr/bin/python
 import boto3
 import json
 import sys
 import subprocess
 import time
-foundedNames = []
+# foundedNames = []
 
 def actions(name):
-    if not (name in foundedNames):
-        foundedNames.append(name)
-        subprocess.call(["python", "say_hi.py", name])
+    # if not (name in foundedNames):
+        # foundedNames.append(name)
+        # subprocess.call(["python", "say_hi.py", name])
         subprocess.call(["python", "sns-publish.py", "VIP %s comes in" % name])
-        print "Founded %d peoples" % len(foundedNames)
+        # print "Founded %d peoples" % len(foundedNames)
     # else:
         # print "Founded %d peoples" % len(foundedNames)
 

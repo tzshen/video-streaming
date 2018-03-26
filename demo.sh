@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $1 == "start" ]; then
-  python video-stream-helper.py --create
+  # python video-stream-helper.py --create
   python data-stream-helper.py --create
   python rekognition-process.py --create
   python rekognition-process.py --start
