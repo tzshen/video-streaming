@@ -9,7 +9,7 @@ elif [ $1 == "stop" ]; then
   python rekognition-process.py --stop
   python rekognition-process.py --delete
   python data-stream-helper.py --delete
-  python video-stream-helper.py --delete
+  # python video-stream-helper.py --delete
 else
   echo "start or stop?"
 fi
